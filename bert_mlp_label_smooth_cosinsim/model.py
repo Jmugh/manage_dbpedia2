@@ -25,14 +25,15 @@ class MLP(nn.Module):
         self.bert=BertModel.from_pretrained(cfg.bert_path)
         for p in self.bert.parameters():
             p.requires_grad_(False)
-        self.embedding=nn.Embedding(num_embeddings=232,embedding_dim=232)
+        self.embedding=nn.Embedding(num_embeddings=232,embedding_dim=232).to(cfg.device)
         self.linear1=nn.Linear(in_features=self.in_dim,out_features=self.hidden_dim1)
         self.relu=nn.ReLU()
         self.linear2=nn.Linear(in_features=hidden_dim1,out_features=hidden_dim2)
         self.dropout = nn.Dropout(0.3)
         self.linear3 = nn.Linear(in_features=hidden_dim2, out_features=n_classes)
 
-        self.label_ids=torch.tensor([i for i in range(232)])
+        self.label_ids=torch.tensor([i for i in range(232)]).to(cfg.device)
+        self.cos=nn.CosineSimilarity(dim=-1)
         self.sigmoid=nn.Sigmoid()
 
     def forward(self, input_ids, token_type_ids, attention_mask):
@@ -44,9 +45,13 @@ class MLP(nn.Module):
         output = self.dropout(output)
         output=self.linear2(output)
         output=self.relu(output)
-        output=self.linear3(output)
-        label_embedding=self.embedding(self.label_ids)
-        output = output.cos(label_embedding)
+        output=self.linear3(output)#[batch_size,232]
+        output=output.unsqueeze(dim=1)#[batch_size,1,232]
+        label_embedding=self.embedding(self.label_ids)#[232,232]
+        # output = self.cos(output,label_embedding)
+        output=torch.mul(output,label_embedding)
+        # print(output.shape)
+        output=output.view(-1,232)
         output=self.sigmoid(output)
         return output
 

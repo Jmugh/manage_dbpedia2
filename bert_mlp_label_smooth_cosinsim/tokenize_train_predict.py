@@ -2,7 +2,7 @@ from process_data import  split_train_test
 from transformers import BertTokenizer, BertModel
 from config import Config
 from common import DataLoaderTokenizer
-from model import MLP,Hetero_label
+from model import MLP
 import torch
 import torch.nn as nn
 import numpy as np
@@ -52,7 +52,6 @@ test_dataloader=DataLoaderTokenizer(test_input_ids,test_token_type_ids,test_atte
 
 
 model=MLP(n_classes=n_classes)
-# model=Hetero_label(n_classes=n_classes,use_label=cfg.use_label)
 model=model.to(cfg.device)
 criteron=nn.BCELoss()
 optimizer=torch.optim.Adam(filter(lambda p: p.requires_grad, model.parameters()),lr=cfg.learning_rate)

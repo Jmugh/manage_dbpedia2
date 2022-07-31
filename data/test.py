@@ -16,7 +16,15 @@ def get_entity(filename=filename):
                 # print("types:"+json_line["TYPES"]+"\n")
 
                 print(line)
+def test():
+    import torch
+    a=torch.tensor([[1,2,3],[4,5,6]])#1 2 3
+                                   #4  5   6
+    b=torch.tensor([[2,2,2],[3,3,3],[4,4,4]])
 
+    a=a.unsqueeze(dim=1)
+    print(a)
+    print(torch.mul(a,b))
 
 if __name__ == '__main__':
-    get_entity()
+    test()
