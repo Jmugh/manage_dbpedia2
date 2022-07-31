@@ -14,10 +14,10 @@ class MLP(nn.Module):
     def __init__(self,n_classes,in_dim=768,hidden_dim1=cfg.hidden_dim1,hidden_dim2=cfg.hidden_dim2,use_label="cooccurence_cosin_label_graph.pth"):
         super(MLP, self).__init__()
         print("--------------------MLP-------------------------")
-        self.lamda = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
-        self.mu = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
-        self.lamda.data = torch.tensor([0.5])
-        self.mu.data = torch.tensor([0.5])
+        # self.lamda = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
+        # self.mu = torch.nn.Parameter(torch.FloatTensor(1), requires_grad=True)
+        # self.lamda.data = torch.tensor([0.5])
+        # self.mu.data = torch.tensor([0.5])
         self.in_dim=in_dim
         self.hidden_dim1=hidden_dim1
         self.hidden_dim2=hidden_dim2
@@ -27,16 +27,16 @@ class MLP(nn.Module):
         for p in self.bert.parameters():
             p.requires_grad_(False)
 
-        self.gcn_cooccurence = GraphConv(in_feats=768, out_feats=n_classes)
-        self.gcn_heirarchy = GraphConv(in_feats=768, out_feats=n_classes)
-        self.gat_cooccurence = GATConv(in_feats=768, out_feats=int(n_classes/(cfg.num_heads)),num_heads=cfg.num_heads)
-        self.gat_heirarchy = GATConv(in_feats=768, out_feats=int(n_classes/(cfg.num_heads)),num_heads=cfg.num_heads)
-        g_list = dgl.load_graphs(filename="./saved_graphs/cooccurence_graph.pth")
-        g_cooccurence=g_list[0][0]
-        self.g_cooccurence = g_cooccurence.to(cfg.device)
-        g_list = dgl.load_graphs(filename="./saved_graphs/heirarchy_graph.pth")
-        g_heirarchy = g_list[0][0]
-        self.g_heirarchy= g_heirarchy.to(cfg.device)
+        # self.gcn_cooccurence = GraphConv(in_feats=768, out_feats=n_classes)
+        # self.gcn_heirarchy = GraphConv(in_feats=768, out_feats=n_classes)
+        # self.gat_cooccurence = GATConv(in_feats=768, out_feats=int(n_classes/(cfg.num_heads)),num_heads=cfg.num_heads)
+        # self.gat_heirarchy = GATConv(in_feats=768, out_feats=int(n_classes/(cfg.num_heads)),num_heads=cfg.num_heads)
+        # g_list = dgl.load_graphs(filename="./saved_graphs/cooccurence_graph.pth")
+        # g_cooccurence=g_list[0][0]
+        # self.g_cooccurence = g_cooccurence.to(cfg.device)
+        # g_list = dgl.load_graphs(filename="./saved_graphs/heirarchy_graph.pth")
+        # g_heirarchy = g_list[0][0]
+        # self.g_heirarchy= g_heirarchy.to(cfg.device)
 
 
 
