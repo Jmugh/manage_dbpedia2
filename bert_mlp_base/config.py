@@ -13,7 +13,7 @@ class Config(object):
             self.bert_path = '../../bert-base-uncased'
         elif operating == 'Windows':
             self.bert_path = 'D:\\bert-base-uncased'
-        self.device="cuda"
+        self.device="cuda:1"
         self.parameter=""
         self.batch_size=256
         self.setup_seed(20)

@@ -50,6 +50,7 @@ class MLP(nn.Module):
         label_embedding=self.embedding(self.label_ids)#[232,232]
         # output = self.cos(output,label_embedding)
         output=torch.mul(output,label_embedding)
+        output=torch.sum(output,dim=-1)
         # print(output.shape)
         output=output.view(-1,232)
         output=self.sigmoid(output)
