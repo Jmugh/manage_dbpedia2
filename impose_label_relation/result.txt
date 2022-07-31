@@ -1,0 +1,455 @@
+
+去掉self attention
+**********************with label graph**********************************
+*时间：2022-03-26 12:58:38
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*embedding_dim=100
+*epochs=128
+*learning_rate=0.0001
+*lstm_dropout=0.7
+*attention_dropout=0.7
+*best_acc_result:
+epoch:125
+train:0.98730	0.99807	0.99759	0.99783	0.98795	0.98726	0.98761
+ val:0.74840	0.94038	0.91285	0.92641	0.92514	0.90112	0.91297
+ test:0.74720	0.94070	0.91245	0.92636	0.92231	0.89784	0.90991
+********************************************************
+
+
+不去掉self attention
+**********************with label graph**********************************
+*时间：2022-03-26 14:29:28
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*embedding_dim=100
+*epochs=128
+*learning_rate=0.0001
+*lstm_dropout=0.7
+*attention_dropout=0.7
+*best_acc_result:
+epoch:80
+train:0.96920	0.99490	0.99407	0.99449	0.98487	0.98369	0.98428
+ val:0.74260	0.94173	0.91025	0.92572	0.92640	0.89846	0.91222
+ test:0.73460	0.93646	0.90897	0.92251	0.92241	0.89611	0.90907
+********************************************************
+
+
+不去掉self attention
+**********************with label graph**********************************
+*时间：2022-03-26 16:39:46
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*embedding_dim=300
+*epochs=160
+*learning_rate=0.0001
+*lstm_dropout=0.7
+*attention_dropout=0.7
+*best_acc_result:
+epoch:140
+train:0.99195	0.99867	0.99853	0.99860	0.98846	0.98817	0.98832
+ val:0.78760	0.95716	0.92582	0.94123	0.94181	0.91409	0.92774
+ test:0.77600	0.95116	0.92089	0.93578	0.93522	0.90775	0.92128
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-26 20:00:57
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*embedding_dim=300
+*epochs=160
+*learning_rate=0.0001
+*lstm_dropout=0.7
+*attention_dropout=0.7
+*best_acc_result:
+epoch:140
+train:0.99195	0.99867	0.99853	0.99860	0.98846	0.98817	0.98832
+ val:0.78760	0.95716	0.92582	0.94123	0.94181	0.91409	0.92774
+ test:0.77600	0.95116	0.92089	0.93578	0.93522	0.90775	0.92128
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-26 22:28:20
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:95
+train:0.98257	0.99748	0.99661	0.99704	0.98725	0.98615	0.98670
+ val:0.78480	0.95441	0.92333	0.93862	0.93928	0.91046	0.92465
+ test:0.76320	0.94849	0.91629	0.93211	0.93152	0.90341	0.91725
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-26 22:59:22
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:171
+train:0.98872	0.99837	0.99791	0.99814	0.98807	0.98744	0.98775
+ val:0.80900	0.95735	0.93276	0.94489	0.94108	0.92009	0.93047
+ test:0.80020	0.95363	0.93026	0.94180	0.93800	0.91675	0.92725
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-27 12:09:56
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*lstm_hidden_dim=64
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:127
+train:0.87582	0.98162	0.97074	0.97615	0.97151	0.95895	0.96519
+ val:0.72340	0.94577	0.88277	0.91319	0.91300	0.87036	0.89117
+ test:0.71360	0.94031	0.88074	0.90955	0.90952	0.86779	0.88817
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-27 12:22:42
+*参数:
+*abstract_word_num=300
+*hidden_dim=256
+*lstm_hidden_dim=64
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:171
+train:0.96593	0.99503	0.99311	0.99406	0.98491	0.98254	0.98372
+ val:0.69160	0.93587	0.87433	0.90405	0.90515	0.86163	0.88286
+ test:0.68300	0.93032	0.87478	0.90169	0.90758	0.86358	0.88503
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-27 13:42:14
+*参数:
+*abstract_word_num=200
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=100
+*epochs=180
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:167
+train:0.93097	0.99046	0.98453	0.98748	0.97988	0.97373	0.97679
+ val:0.76160	0.94824	0.90913	0.92828	0.92895	0.89666	0.91252
+ test:0.75420	0.94232	0.90829	0.92499	0.92245	0.89508	0.90856
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-27 13:45:20
+*参数:
+*abstract_word_num=200
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=100
+*epochs=180
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:157
+train:0.97665	0.99648	0.99540	0.99594	0.98640	0.98521	0.98581
+ val:0.72780	0.93459	0.90138	0.91768	0.91492	0.88748	0.90099
+ test:0.71240	0.92494	0.89762	0.91107	0.91228	0.88360	0.89771
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-27 15:47:25
+*参数:
+*abstract_word_num=200
+*hidden_dim=256
+*lstm_hidden_dim=64
+*embedding_dim=300
+*epochs=240
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:208
+train:0.86238	0.97993	0.96457	0.97219	0.96985	0.95418	0.96195
+ val:0.69600	0.91468	0.88705	0.90065	0.89694	0.87636	0.88653
+ test:0.69040	0.90936	0.88713	0.89811	0.89116	0.87485	0.88293
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-27 15:47:28
+*参数:
+*abstract_word_num=200
+*hidden_dim=256
+*lstm_hidden_dim=64
+*embedding_dim=300
+*epochs=240
+*learning_rate=0.0001
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:88
+train:0.81280	0.97178	0.94946	0.96049	0.96151	0.93856	0.94990
+ val:0.64920	0.89226	0.88147	0.88683	0.87749	0.86990	0.87368
+ test:0.65520	0.89096	0.88372	0.88732	0.88034	0.87257	0.87644
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-27 17:36:31
+*参数:
+*abstract_word_num=200
+*hidden_dim=256
+*lstm_hidden_dim=64
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:169
+train:0.98487	0.99761	0.99719	0.99740	0.98751	0.98680	0.98715
+ val:0.75980	0.94504	0.91304	0.92877	0.92921	0.90152	0.91515
+ test:0.75120	0.94111	0.91034	0.92547	0.92440	0.89818	0.91110
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-27 17:41:12
+*参数:
+*abstract_word_num=200
+*hidden_dim=256
+*lstm_hidden_dim=64
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.5
+*best_acc_result:
+epoch:162
+train:0.98477	0.99759	0.99730	0.99745	0.98768	0.98706	0.98737
+ val:0.73100	0.94854	0.89865	0.92292	0.92844	0.88555	0.90649
+ test:0.71700	0.94062	0.89439	0.91692	0.92091	0.88185	0.90096
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-27 20:13:06
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.7
+*best_acc_result:
+epoch:146
+train:0.98852	0.99824	0.99793	0.99808	0.98812	0.98757	0.98784
+ val:0.77800	0.95170	0.91905	0.93509	0.93145	0.90591	0.91851
+ test:0.77160	0.95108	0.91809	0.93430	0.93099	0.90461	0.91761
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-27 20:18:12
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.7
+*best_acc_result:
+epoch:176
+train:0.99313	0.99886	0.99874	0.99880	0.98871	0.98846	0.98859
+ val:0.77160	0.95336	0.91800	0.93535	0.93452	0.90586	0.91997
+ test:0.76400	0.95063	0.91524	0.93260	0.92971	0.90332	0.91633
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-27 22:43:08
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=300
+*epochs=120
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.7
+*datasets_path=../data/datasets_abstract2_5w.txt
+*best_acc_result:
+epoch:82
+train:0.74110	0.95474	0.92972	0.94206	0.94299	0.91485	0.92870
+ val:0.79480	0.96196	0.92699	0.94415	0.94231	0.91185	0.92683
+ test:0.79140	0.95960	0.92399	0.94146	0.94083	0.90812	0.92418
+********************************************************
+
+//下面的是去掉entity name attention 的
+
+**********************with label graph**********************************
+*时间：2022-03-27 22:46:36
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=300
+*epochs=120
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.7
+*dropout_query=0.5
+*dropout_attention=0.7
+*datasets_path=../data/datasets_abstract2_5w.txt
+*best_acc_result:
+epoch:108
+train:0.78440	0.96221	0.94643	0.95426	0.95392	0.93339	0.94354
+ val:0.79920	0.96156	0.92619	0.94354	0.93858	0.91164	0.92492
+ test:0.79240	0.95638	0.92784	0.94189	0.93737	0.91149	0.92425
+********************************************************
+
+
+
+**********************with label graph**********************************
+*时间：2022-03-27 23:53:42
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=300
+*epochs=120
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.6
+*dropout_query=0.5
+*dropout_attention=0.4
+*datasets_path=../data/datasets_abstract2_5w.txt
+*best_acc_result:
+epoch:118
+train:0.93885	0.98953	0.98768	0.98861	0.97940	0.97646	0.97793
+ val:0.83080	0.96088	0.93704	0.94881	0.94169	0.92417	0.93285
+ test:0.81820	0.95777	0.93168	0.94455	0.93780	0.91822	0.92791
+********************************************************
+
+
+
+**********************without label graph**********************************
+*时间：2022-03-28 10:28:47
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=300
+*epochs=180
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.6
+*dropout_query=0.5
+*dropout_attention=0.4
+*datasets_path=../data/datasets_abstract2_5w.txt
+*best_acc_result:
+epoch:134
+train:0.94475	0.99071	0.98922	0.98996	0.98038	0.97798	0.97918
+ val:0.83060	0.95407	0.94312	0.94856	0.93890	0.93129	0.93508
+ test:0.82920	0.95244	0.94316	0.94778	0.93868	0.92938	0.93400
+********************************************************
+
+
+*heirarchy_label_graph.pth
+**********************with label graph**********************************
+*时间：2022-04-13 04:43:09
+*参数:
+*abstract_word_num=256
+*hidden_dim=256
+*lstm_hidden_dim=128
+*embedding_dim=100
+*epochs=900
+*learning_rate=0.0005
+*batch_size=128
+*dropout_lstm=0.6
+*dropout_query=0.5
+*dropout_attention=0.4
+*datasets_path=../data/datasets_abstract2_5w.txt
+*best_acc_result:
+epoch:92
+train:0.82980		0.96172	0.94807
+ val:0.79540		0.94276	0.92544
+ test:0.79620		0.94204	0.92373
+********************************************************
+
+
+
