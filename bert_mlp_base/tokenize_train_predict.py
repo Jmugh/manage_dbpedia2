@@ -2,7 +2,7 @@ from process_data import  split_train_test
 from transformers import BertTokenizer, BertModel
 from config import Config
 from common import DataLoaderTokenizer
-from model import MLP,Hetero_label
+from model import MLP
 import torch
 import torch.nn as nn
 import numpy as np
@@ -75,7 +75,6 @@ def eval(model,dataloader):
 
 print("start to train ..........")
 
-bert=BertModel.from_pretrained(cfg.bert_path).to(cfg.device)
 best_acc=0
 best_result=""
 for epoch in range(cfg.epochs):

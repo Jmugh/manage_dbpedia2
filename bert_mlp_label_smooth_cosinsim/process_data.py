@@ -23,8 +23,10 @@ def split_train_test():
 
     multiLabelBinarizer=MultiLabelBinarizer().fit(train_y)
     train_y=multiLabelBinarizer.transform(train_y)
+    # print(multiLabelBinarizer.classes_)
     test_y=multiLabelBinarizer.transform(test_y)
     return train_x,train_entitynames,train_y,test_x,test_entitynames,test_y
 
 if __name__=="__main__":
     print("hi")
+    # split_train_test()

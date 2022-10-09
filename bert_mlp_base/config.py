@@ -13,9 +13,9 @@ class Config(object):
             self.bert_path = '../../bert-base-uncased'
         elif operating == 'Windows':
             self.bert_path = 'D:\\bert-base-uncased'
-        self.device="cuda:1"
+        self.device="cuda:0"
         self.parameter=""
-        self.batch_size=256
+        self.batch_size=128
         self.setup_seed(20)
         self.datasets_path= "../data/datasets_abstract2_5w.txt"
         self.word2vec_path= ""

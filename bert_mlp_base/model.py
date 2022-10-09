@@ -26,6 +26,12 @@ class MLP(nn.Module):
         self.bert=BertModel.from_pretrained(cfg.bert_path)
         for p in self.bert.parameters():
             p.requires_grad_(False)
+        self.unfreeze_layers = ['layer.11', 'bert.pooler']
+        for name, param in self.bert.named_parameters():
+            param.requires_grad = False
+            for ele in self.unfreeze_layers:
+                if ele in name:
+                    param.requires_grad = True
 
         # self.gcn_cooccurence = GraphConv(in_feats=768, out_feats=n_classes)
         # self.gcn_heirarchy = GraphConv(in_feats=768, out_feats=n_classes)
