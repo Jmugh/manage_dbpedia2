@@ -1,0 +1,30 @@
+best_acc_result:label embedding + MSELoss with param:[1,0.2,0.4,0.6,0.8,10]
+epoch:35
+train:0.92727		0.98236	0.97230
+ val:0.89140		0.96958	0.95908
+ test:0.88080		0.96612	0.95466
+best_acc_result:label embedding + MSELoss with param:[1,0.2,0.4,0.6,0.8,10]
+epoch:48
+train:0.94547		0.98732	0.97733
+ val:0.89180		0.97013	0.96015
+ test:0.88100		0.96577	0.95494
+best_acc_result:label embedding + MSELoss with param:[1,0.2,0.4,0.6,0.8,10]
+epoch:33
+train:0.93073		0.98381	0.97377
+ val:0.89160		0.96952	0.95919
+ test:0.87880		0.96518	0.95448
+best_acc_result:label embedding + MSELoss with param:[1,0.2,0.4,0.6,0.8,10]
+epoch:51
+train:0.94952		0.98815	0.97793
+ val:0.88880		0.96837	0.95759
+ test:0.88020		0.96603	0.95419
+best_acc_result:label embedding + MSELoss with param:[1,0.2,0.4,0.6,0.8,10]
+epoch:49
+train:0.95073		0.98908	0.97887
+ val:0.89280		0.96853	0.95811
+ test:0.87980		0.96562	0.95481
+best_acc_result:label embedding + MSELoss with param:[1,0.2,0.4,0.6,0.8,10]
+epoch:31
+train:0.92648		0.98227	0.97221
+ val:0.89380		0.97026	0.95973
+ test:0.88340		0.96608	0.95540

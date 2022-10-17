@@ -1,0 +1,5 @@
+best_acc_result:邻接矩阵+label smoothing-MSELoss
+epoch:46
+train:0.95440		0.98989	0.97921
+ val:0.88980		0.96886	0.95647
+ test:0.88120		0.96547	0.95286

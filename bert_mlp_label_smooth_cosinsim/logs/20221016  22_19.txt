@@ -1,0 +1,20 @@
+best_acc_result:label embedding + MSELoss with param:[1.2,1.4,1.6,1.8]
+epoch:39
+train:0.93593		0.98483	0.97466
+ val:0.88740		0.96750	0.95787
+ test:0.88400		0.96656	0.95521
+best_acc_result:label embedding + MSELoss with param:[1.2,1.4,1.6,1.8]
+epoch:49
+train:0.94522		0.98729	0.97723
+ val:0.89040		0.96846	0.95838
+ test:0.88260		0.96645	0.95615
+best_acc_result:label embedding + MSELoss with param:[1.2,1.4,1.6,1.8]
+epoch:55
+train:0.94952		0.98857	0.97856
+ val:0.89160		0.96945	0.95932
+ test:0.88400		0.96699	0.95634
+best_acc_result:label embedding + MSELoss with param:[1.2,1.4,1.6,1.8]
+epoch:57
+train:0.95020		0.98893	0.97882
+ val:0.89200		0.96974	0.96001
+ test:0.88400		0.96593	0.95579

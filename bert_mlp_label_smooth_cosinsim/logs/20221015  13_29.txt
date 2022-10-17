@@ -1,0 +1,5 @@
+best_acc_result:bert base without any
+epoch:34
+train:0.92225		0.98183	0.97195
+ val:0.88580		0.96720	0.95702
+ test:0.87860		0.96609	0.95547

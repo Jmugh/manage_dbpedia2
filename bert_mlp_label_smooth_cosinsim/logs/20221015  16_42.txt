@@ -1,0 +1,5 @@
+best_acc_result:label embedding
+epoch:43
+train:0.95125		0.98919	0.97901
+ val:0.88980		0.96838	0.95813
+ test:0.88160		0.96531	0.95435

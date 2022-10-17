@@ -1,6 +1,8 @@
 import platform
+import os
 class Config(object):
     def __init__(self):
+        # os.environ['CUDA_VISIBLE_DEVICES']='2'
         self.sentence_len=300
         self.epochs=60
         self.learning_rate=0.001
